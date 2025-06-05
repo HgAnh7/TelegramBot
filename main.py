@@ -23,13 +23,13 @@ THỜI_GIAN_CHỜ = timedelta(seconds=300)
 FREE_GIỚI_HẠN_CHIA_SẺ = 400
 VIP_GIỚI_HẠN_CHIA_SẺ = 1000
 viptime = 100
-ALLOWED_GROUP_ID = -4269071081   # ID BOX
-admin_diggory = "DucThinhEXE" # ví dụ : để user name admin là @diggory347 bỏ dấu @ đi là đc
-name_bot = "Thinh Bu Bu"
-zalo = "0923932075"
-web = "https://jirayshop.xyz/"
+ALLOWED_GROUP_ID = -1002408191237   # ID BOX
+admin_diggory = "HgAnh7" # ví dụ : để user name admin là @diggory347 bỏ dấu @ đi là đc
+name_bot = "Hoang Anh 🇻🇳"
+zalo = "???"
+web = "???"
 facebook = "no"
-allowed_group_id = -4269071081 # ID BOX
+allowed_group_id = -1002408191237 # ID BOX
 users_keys = {}
 key = ""
 freeuser = []
@@ -37,7 +37,7 @@ auto_spam_active = False
 last_sms_time = {}
 allowed_users = []
 processes = []
-ADMIN_ID =  5759867629 # ID ADMIN
+ADMIN_ID =  6379209139 # ID ADMIN
 connection = sqlite3.connect('user_data.db')
 cursor = connection.cursor()
 last_command_time = {}
@@ -48,13 +48,13 @@ share_count = {}
 global_lock = Lock()
 admin_mode = False
 share_log = []
-tool = 'https://jirayshop.xyz/'
-BOT_LINK = 'https://t.me/thuekeytool_bot'
-TOKEN = '7260615040:AAFUBGB1jmV8K5N2ATsiJaA5xmLr0v_FzHg'  
+tool = '???'
+BOT_LINK = 'https://t.me/???'
+TOKEN = os.getenv("TELEGRAM_TOKEN")
 bot = TeleBot(TOKEN)
 
-ADMIN_ID = 5759867629  # id admin
-admins = {5759867629}
+ADMIN_ID = 6379209139  # id admin
+admins = {6379209139}
 bot_admin_list = {}
 cooldown_dict = {}
 allowed_users = []
@@ -212,11 +212,13 @@ def tiktok_command(message):
 def send_tool_links(message):
     markup = types.InlineKeyboardMarkup()
     
-    tool_links = [
-        ("https://ducthinhexe.github.io/huongdan", "Tool gộp vip"),
-        ("https://ducthinhexe.github.io/huongdan", "Tool Golike Tiktok"),
-        ("https://ducthinhexe.github.io/huongdan", "Tool Gộp - Source")
-    ]
+    #tool_links = [
+        #("https://ducthinhexe.github.io/huongdan", "Tool gộp vip"),
+        #("https://ducthinhexe.github.io/huongdan", "Tool Golike Tiktok"),
+        #("https://ducthinhexe.github.io/huongdan", "Tool Gộp - Source")
+    #]
+    
+    tool_link = []
     
     for link, desc in tool_links:
         markup.add(types.InlineKeyboardButton(text=desc, url=link))
@@ -628,7 +630,7 @@ def send_welcome(message):
 │» /id : Lấy ID Tele Của Bản Thân
 │» /voice : Đổi Văn Bản Thành Giọng Nói.
 │» /tiktok : Check Thông Tin - Tải Video Tiktok.
-│» /tool : Tải JirayTool
+│» /tool : Tải HgAnh7
 │» /time : check thời gian hoạt động
 │» /ad : có bao nhiêu admin
 │» /code : Lấy Code html của web
